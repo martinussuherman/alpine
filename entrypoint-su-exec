@@ -1,0 +1,14 @@
+#!/bin/sh
+
+ENTRYPOINT_COMMAND=$1
+shift
+ENTRYPOINT_PARAMS=$@
+
+# set user group and home
+set-user-group-home
+
+# chown path
+chown-path
+
+# exec ENTRYPOINT_COMMAND as user
+exec su-exec $EUSER $ENTRYPOINT_COMMAND $ENTRYPOINT_PARAMS
