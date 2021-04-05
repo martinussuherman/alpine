@@ -23,11 +23,65 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push arm64v8 image
+      - name: Build and push alpine 3.12 amd64 image
         uses: docker/build-push-action@v2
         with:
-          file: ./glibc-arm64v8/Dockerfile
+          file: ./3.12-amd64/Dockerfile
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: martinussuherman/alpine:3.12-amd64
+
+      - name: Build and push alpine 3.12 arm32v6 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-arm32v6/Dockerfile
+          context: .
+          platforms: linux/arm/v6
+          push: true
+          tags: martinussuherman/alpine:3.12-arm32v6
+
+      - name: Build and push alpine 3.12 arm32v7 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-arm32v7/Dockerfile
+          context: .
+          platforms: linux/arm/v7
+          push: true
+          tags: martinussuherman/alpine:3.12-arm32v7
+
+      - name: Build and push alpine 3.12 arm64v8 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-arm64v8/Dockerfile
           context: .
           platforms: linux/arm64
           push: true
-          tags: martinussuherman/alpine:glibc-3.12-arm64v8
+          tags: martinussuherman/alpine:3.12-arm64v8
+
+      - name: Build and push alpine 3.12 i386 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-i386/Dockerfile
+          context: .
+          platforms: linux/i386
+          push: true
+          tags: martinussuherman/alpine:3.12-i386
+
+      - name: Build and push alpine 3.12 ppc64le image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-ppc64le/Dockerfile
+          context: .
+          platforms: linux/ppc64le
+          push: true
+          tags: martinussuherman/alpine:3.12-ppc64le
+
+      - name: Build and push alpine 3.12 s390x image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-s390x/Dockerfile
+          context: .
+          platforms: linux/s390x
+          push: true
+          tags: martinussuherman/alpine:3.12-s390x
