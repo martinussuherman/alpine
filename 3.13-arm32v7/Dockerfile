@@ -1,3 +1,4 @@
+# buildkit bug workaround - https://github.com/moby/buildkit/issues/1368
 FROM arm32v7/alpine:3.13
 
 ENV \
