@@ -37,7 +37,7 @@ jobs:
         with:
           file: ./3.12-arm32v6/Dockerfile
           context: .
-          platforms: linux/arm,linux/arm/v6
+          platforms: linux/arm/v6
           push: true
           tags: martinussuherman/alpine:3.12-arm32v6
 
@@ -46,7 +46,7 @@ jobs:
         with:
           file: ./3.12-arm32v7/Dockerfile
           context: .
-          platforms: linux/arm,linux/arm/v7
+          platforms: linux/arm/v7
           push: true
           tags: martinussuherman/alpine:3.12-arm32v7
 
@@ -55,7 +55,7 @@ jobs:
         with:
           file: ./3.12-arm64v8/Dockerfile
           context: .
-          platforms: linux/arm64,linux/arm/v8
+          platforms: linux/arm64
           push: true
           tags: martinussuherman/alpine:3.12-arm64v8
 
