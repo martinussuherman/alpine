@@ -8,7 +8,8 @@
 
 name: Snyk Container 3.12-amd64-glibc
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   snyk:
