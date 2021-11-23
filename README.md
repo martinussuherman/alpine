@@ -1,6 +1,9 @@
 # martinussuherman/alpine
 
+[![CodeFactor](https://www.codefactor.io/repository/github/martinussuherman/alpine/badge)](https://www.codefactor.io/repository/github/martinussuherman/alpine)
 ![GitHub](https://img.shields.io/github/license/martinussuherman/alpine) ![Docker Pulls](https://img.shields.io/docker/pulls/martinussuherman/alpine) ![Docker Stars](https://img.shields.io/docker/stars/martinussuherman/alpine)
+
+[![Docker Build and Push Image](https://github.com/martinussuherman/alpine/actions/workflows/docker-build-push.yml/badge.svg)](https://github.com/martinussuherman/alpine/actions/workflows/docker-build-push.yml)
 
 [![From Alpine](https://img.shields.io/badge/FROM-alpine-brightgreen.svg)](https://hub.docker.com/_/alpine) ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/martinussuherman/alpine/latest) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/martinussuherman/alpine/latest)
 
