@@ -95,6 +95,15 @@ jobs:
           push: true
           tags: martinussuherman/alpine:3.14-amd64
 
+      - name: Build and push alpine 3.15 amd64 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.15-amd64/Dockerfile
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: martinussuherman/alpine:3.15-amd64
+
       - name: Build and push alpine 3.17 amd64 image
         uses: docker/build-push-action@v2
         with:
@@ -130,6 +139,15 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: martinussuherman/alpine:3.14-amd64-glibc
+
+      - name: Build and push alpine 3.15 amd64 glibc image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.15-amd64-glibc/Dockerfile
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: martinussuherman/alpine:3.15-amd64-glibc
 
       - name: Build and push alpine 3.17 amd64 glibc image
         uses: docker/build-push-action@v2
