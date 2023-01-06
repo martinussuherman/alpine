@@ -1,3 +1,4 @@
+# buildkit bug workaround - https://github.com/moby/buildkit/issues/1368
 FROM alpine:3.14
 
 ENV \
