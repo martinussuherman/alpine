@@ -185,11 +185,11 @@ jobs:
           push: true
           tags: martinussuherman/alpine:3.17-amd64-glibc
 
-      - name: Build and push alpine 3.24 amd64 glibc image
-        uses: docker/build-push-action@v2
-        with:
-          file: ./3.24-amd64-glibc/Dockerfile
-          context: .
-          platforms: linux/amd64
-          push: true
-          tags: martinussuherman/alpine:3.24-amd64-glibc
+      # - name: Build and push alpine 3.24 amd64 glibc image
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     file: ./3.24-amd64-glibc/Dockerfile
+      #     context: .
+      #     platforms: linux/amd64
+      #     push: true
+      #     tags: martinussuherman/alpine:3.24-amd64-glibc
